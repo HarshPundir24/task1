@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2,h4{
+    display: inline-block;
+    text-align: center;
+    background-color: orange;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.member {
+    background: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 300px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.member h2 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.member p {
+    color: #666;
+}
+
+.bio {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    width: 30%;
+    height: 30%;
+    background-color:lightblue;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.member:hover .bio {
+    display: block;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .member {
+        max-width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    .member img {
+        width: 100%; 
+        height: auto;
+        border-radius: 5px; 
+    }
+
+    .member h3 {
+        font-size: 1.5em; 
+        text-align: center; 
+        margin: 10px 0; 
+    }
+
+    .member p {
+        font-size: 1em; 
+        text-align: center;
+        padding: 0 10px; 
+    }
+    .bio {
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: 10%;
+        padding: 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio {
+        width: 95%;
+        left: 2.5%;
+        top: 5%;
+        height: auto;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
